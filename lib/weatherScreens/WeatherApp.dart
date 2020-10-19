@@ -117,12 +117,15 @@ class _WeatherAppState extends State<WeatherApp> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text(
-                                "$temperature°C",
-                                style: TextStyle(
-                                    fontSize: 80.0,
-                                    fontWeight: FontWeight.w300,
-                                    color: Colors.white),
+                              FadeAnimation(
+                                1,
+                                Text(
+                                  "$temperature°C",
+                                  style: TextStyle(
+                                      fontSize: 80.0,
+                                      fontWeight: FontWeight.w300,
+                                      color: Colors.white),
+                                ),
                               ),
                               Text(
                                 "$main",
@@ -167,7 +170,7 @@ class _WeatherAppState extends State<WeatherApp> {
                                         border: Border(
                                             bottom: BorderSide(
                                                 color:
-                                                    Color.fromRGBO(0, 0, 0, .5),
+                                                    Color.fromRGBO(0, 0, 0, .8),
                                                 width: 35.0))),
                                     padding: EdgeInsets.all(16.0),
                                     child: Column(
@@ -204,10 +207,10 @@ class _WeatherAppState extends State<WeatherApp> {
                                         ),
                                         Container(
                                           transform: Matrix4.translationValues(
-                                              0.0, 45.0, 0.0),
+                                              0.0, 43.0, 0.0),
                                           child: Text('Wind',
                                               style: TextStyle(
-                                                  color: Colors.white,
+                                                  color: Colors.white70,
                                                   fontSize: 20.0)),
                                         )
                                       ],
@@ -226,7 +229,7 @@ class _WeatherAppState extends State<WeatherApp> {
                                         border: Border(
                                             bottom: BorderSide(
                                                 color:
-                                                    Color.fromRGBO(0, 0, 0, .6),
+                                                    Color.fromRGBO(0, 0, 0, .8),
                                                 width: 35.0))),
                                     padding: EdgeInsets.fromLTRB(
                                         22.0, 16.0, 22.0, 16.0),
@@ -254,10 +257,10 @@ class _WeatherAppState extends State<WeatherApp> {
                                         ),
                                         Container(
                                           transform: Matrix4.translationValues(
-                                              0.0, 45.0, 0.0),
+                                              0.0, 43.0, 0.0),
                                           child: Text('Humidity',
                                               style: TextStyle(
-                                                  color: Colors.white,
+                                                  color: Colors.white70,
                                                   fontSize: 20.0)),
                                         )
                                       ],
@@ -276,7 +279,7 @@ class _WeatherAppState extends State<WeatherApp> {
                                         border: Border(
                                             bottom: BorderSide(
                                                 color:
-                                                    Color.fromRGBO(0, 0, 0, .6),
+                                                    Color.fromRGBO(0, 0, 0, .8),
                                                 width: 35.0))),
                                     padding: EdgeInsets.all(16.0),
                                     child: Column(
@@ -313,10 +316,10 @@ class _WeatherAppState extends State<WeatherApp> {
                                         ),
                                         Container(
                                           transform: Matrix4.translationValues(
-                                              0.0, 45.0, 0.0),
+                                              0.0, 43.0, 0.0),
                                           child: Text('Pressure',
                                               style: TextStyle(
-                                                  color: Colors.white,
+                                                  color: Colors.white70,
                                                   fontSize: 20.0)),
                                         )
                                       ],
