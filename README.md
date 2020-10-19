@@ -5,10 +5,12 @@ The app gives the update weather info through API when a user swipe from one Tan
 ['Dar es salaam',Mbeya and Arusha].
 
 # Language used:
-Dart
+Dart 2.10.2v
 
 # Framework used:
-Flutter
+Flutter 1.22.2v
+
+
 
 
 
