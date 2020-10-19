@@ -163,13 +163,13 @@ class _WeatherAppState extends State<WeatherApp> {
                                   child: Container(
                                     decoration: BoxDecoration(
                                         color:
-                                            Color.fromRGBO(186, 104, 200, .3),
+                                            Color.fromRGBO(186, 104, 200, .4),
                                         border: Border(
                                             bottom: BorderSide(
                                                 color:
                                                     Color.fromRGBO(0, 0, 0, .5),
                                                 width: 35.0))),
-                                    padding: EdgeInsets.all(20.0),
+                                    padding: EdgeInsets.all(16.0),
                                     child: Column(
                                       children: <Widget>[
                                         Column(
@@ -183,11 +183,21 @@ class _WeatherAppState extends State<WeatherApp> {
                                               transform:
                                                   Matrix4.translationValues(
                                                       0.0, 20.0, 0.0),
-                                              child: Text(
-                                                "$wind km/h",
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 22.0),
+                                              child: Row(
+                                                children: [
+                                                  Text(
+                                                    "$wind",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 22.0),
+                                                  ),
+                                                  Text(
+                                                    " km/h",
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 18.0),
+                                                  )
+                                                ],
                                               ),
                                             ),
                                           ],
@@ -212,13 +222,14 @@ class _WeatherAppState extends State<WeatherApp> {
                                   child: Container(
                                     decoration: BoxDecoration(
                                         color:
-                                            Color.fromRGBO(186, 104, 200, .3),
+                                            Color.fromRGBO(186, 104, 200, .4),
                                         border: Border(
                                             bottom: BorderSide(
                                                 color:
                                                     Color.fromRGBO(0, 0, 0, .6),
                                                 width: 35.0))),
-                                    padding: EdgeInsets.all(20.0),
+                                    padding: EdgeInsets.fromLTRB(
+                                        22.0, 16.0, 22.0, 16.0),
                                     child: Column(
                                       children: <Widget>[
                                         Column(
@@ -233,7 +244,7 @@ class _WeatherAppState extends State<WeatherApp> {
                                                   Matrix4.translationValues(
                                                       0.0, 20.0, 0.0),
                                               child: Text(
-                                                '$humidity%',
+                                                '$humidity %',
                                                 style: TextStyle(
                                                     color: Colors.white,
                                                     fontSize: 22.0),
@@ -261,13 +272,13 @@ class _WeatherAppState extends State<WeatherApp> {
                                   child: Container(
                                     decoration: BoxDecoration(
                                         color:
-                                            Color.fromRGBO(186, 104, 200, .3),
+                                            Color.fromRGBO(186, 104, 200, .4),
                                         border: Border(
                                             bottom: BorderSide(
                                                 color:
                                                     Color.fromRGBO(0, 0, 0, .6),
                                                 width: 35.0))),
-                                    padding: EdgeInsets.all(20.0),
+                                    padding: EdgeInsets.all(16.0),
                                     child: Column(
                                       children: <Widget>[
                                         Column(
@@ -281,11 +292,21 @@ class _WeatherAppState extends State<WeatherApp> {
                                               transform:
                                                   Matrix4.translationValues(
                                                       0.0, 20.0, 0.0),
-                                              child: Text(
-                                                '$pressure hpa',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 22.0),
+                                              child: Row(
+                                                children: [
+                                                  Text(
+                                                    '$pressure',
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 22.0),
+                                                  ),
+                                                  Text(
+                                                    ' hpa',
+                                                    style: TextStyle(
+                                                        color: Colors.white,
+                                                        fontSize: 18.0),
+                                                  )
+                                                ],
                                               ),
                                             ),
                                           ],
