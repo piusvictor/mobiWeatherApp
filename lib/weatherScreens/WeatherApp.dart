@@ -15,18 +15,11 @@ class WeatherApp extends StatefulWidget {
 class _WeatherAppState extends State<WeatherApp> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     setState(() {
       _searchWeather(apiUrl + regions[currentIndex]);
     });
   }
-
-  final List<List<String>> products = [
-    ['assets/images/watch-1.jpg', 'Hugo Boss Oxygen', '100 \$'],
-    ['assets/images/watch-2.jpg', 'Hugo Boss Signature', '120 \$'],
-    ['assets/images/watch-3.jpg', 'Casio G-Shock Premium', '80 \$']
-  ];
 
   int currentIndex = 0;
   var temperature = "";
@@ -42,7 +35,7 @@ class _WeatherAppState extends State<WeatherApp> {
 
   void _next() {
     setState(() {
-      if (currentIndex < products.length - 1) {
+      if (currentIndex < regions.length - 1) {
         currentIndex++;
         _searchWeather(apiUrl + regions[currentIndex]);
       } else {
@@ -52,7 +45,7 @@ class _WeatherAppState extends State<WeatherApp> {
     });
   }
 
-  void _preve() {
+  void _prev() {
     setState(() {
       if (currentIndex > 0) {
         currentIndex--;
@@ -89,7 +82,7 @@ class _WeatherAppState extends State<WeatherApp> {
         child: GestureDetector(
           onHorizontalDragEnd: (DragEndDetails details) {
             if (details.velocity.pixelsPerSecond.dx > 0) {
-              _preve();
+              _prev();
             } else if (details.velocity.pixelsPerSecond.dx < 0) {
               _next();
             }
@@ -358,7 +351,7 @@ class _WeatherAppState extends State<WeatherApp> {
 
   List<Widget> _buildIndicator() {
     List<Widget> indicators = [];
-    for (int i = 0; i < products.length; i++) {
+    for (int i = 0; i < regions.length; i++) {
       if (currentIndex == i) {
         indicators.add(_indicator(true));
       } else {
